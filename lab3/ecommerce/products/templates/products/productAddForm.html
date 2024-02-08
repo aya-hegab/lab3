@@ -1,0 +1,22 @@
+{%extends 'menu/index.html'%} {%load static%}
+<!-- <div></div> -->
+{%block mycontent%}
+<form method="post" enctype="multipart/form-data">
+  {%csrf_token%}
+  <table>
+    <tr>
+      <td>{{form}}</td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <input
+          type="submit"
+          value="ADD"
+          style="width: 30%; padding: 0.5rem; margin-left: 31%"
+        />
+      </td>
+    </tr>
+  </table>
+  <div style="color: red"><h1>{{msg}}</h1></div>
+</form>
+{%endblock%}

@@ -1,0 +1,22 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{%static 'css/style.css'%}" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="main-menu">
+      <ul>
+        <li class="products"><a href="{% url 'products'%}">products</a></li>
+        <li class="category"><a href="{% url 'categories'%}">category</a></li>
+        <li class="about us"><a href="{% url 'aboutus'%}">about us</a></li>
+      </ul>
+    </div>
+    {%block mycontent%}
+    <!-- <div></div> -->
+    {%endblock%}
+  </body>
+</html>

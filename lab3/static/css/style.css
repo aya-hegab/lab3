@@ -1,0 +1,28 @@
+ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 2rem;
+  padding: 2rem;
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: orangered;
+}
+/* 
+li.products {
+  color: orangered;
+  cursor: pointer;
+} */
+table {
+  width: 60%;
+  margin-left: 1rem;
+}
+table,
+th,
+td {
+  border: 1px solid;
+  padding: 1rem;
+}

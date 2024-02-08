@@ -1,0 +1,38 @@
+{%extends 'menu/index.html'%} {%load static%}
+<!-- <div></div> -->
+{%block mycontent%}
+<form method="post" enctype="multipart/form-data">
+  {%csrf_token%}
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Image</th>
+    </tr>
+    <tr>
+      <td>
+        <input
+          type="text"
+          name="cname"
+          style="width: 30%; padding: 0.5rem; margin-left: 30%"
+        />
+      </td>
+      <td>
+        <input
+          type="file"
+          name="cimg"
+          style="width: 30%; padding: 0.5rem; margin-left: 30%"
+        />
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <input
+          type="submit"
+          value="ADD"
+          style="width: 30%; padding: 0.5rem; margin-left: 31%"
+        />
+      </td>
+    </tr>
+  </table>
+</form>
+{%endblock%}

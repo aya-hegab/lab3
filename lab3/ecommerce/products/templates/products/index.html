@@ -1,0 +1,58 @@
+{%extends 'menu/index.html'%} {%load static%}
+<!-- <div></div> -->
+{%block mycontent%}
+<a
+  href="{%url 'products.add'%}"
+  style="
+    border: 2px solid black;
+    padding: 1rem 0.5rem;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    display: inline-block;
+  "
+  >Add New</a
+>
+<a
+  href="{%url 'products.addform'%}"
+  style="
+    border: 2px solid black;
+    padding: 1rem 0.5rem;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    display: inline-block;
+  "
+  >Add New withen Forms</a
+>
+<table>
+  <tr>
+    <th>id</th>
+    <th>name</th>
+    <th>category</th>
+    <th>action</th>
+    <th>img</th>
+  </tr>
+  {%for product in products%}
+  <tr>
+    <td>{{product.id}}</td>
+    <td>{{product.name}}</td>
+    <td>{{product.category.name}}</td>
+    <td>
+      <a href="{%url 'products.details' product.id%}">Details</a>
+      <br />
+      <br />
+      <a href="{%url 'products.delete' product.id%}">Delete</a>
+      <br />
+      <br />
+      <a href="{%url 'products.update' product.id%}">Update</a>
+    </td>
+    <td>
+      <img
+        src="{{product.getImageUrl}}"
+        alt="{{product.img}}"
+        style="width: 100px"
+      />
+    </td>
+  </tr>
+  {%endfor%}
+</table>
+{%endblock%}
